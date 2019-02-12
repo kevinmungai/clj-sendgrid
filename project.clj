@@ -21,4 +21,5 @@
                               [:name "AJ Taylor"]
                               [:url "http://slaejae.com"]
                               [:email "info@slaejae.com"]
-                              [:timezone "-5"]]])
+                              [:timezone "-5"]]]
+  )

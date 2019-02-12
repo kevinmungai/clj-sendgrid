@@ -13,8 +13,8 @@
   [{:keys [from to subject message api-token filename content]}]
   (let [mail-recipients (if (coll? to)
                           [{:to (mapv (fn [add]
-                                         {"email" add})
-                                       to)}]
+                                        {"email" add})
+                                      to)}]
                           [{:to [{"email" to}]}])
         json-body {:personalizations mail-recipients
                    :from    {"email" from}
@@ -23,7 +23,7 @@
         attachments (when (and filename content)
                       {:attachments [{:filename filename :content content}]})
         request {:content-type :json
-                 :headers {:authorization api-token}
+                 :headers {:authorization (str "Bearer " api-token)}
                  :body (write-str (merge json-body attachments))}]
     (client/post (str url "mail/send") request)))
 
