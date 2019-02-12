@@ -1,8 +1,22 @@
-# Created by https://www.gitignore.io/api/emacs
-# Edit at https://www.gitignore.io/?templates=emacs
 
-sendgrid.env
-./env.clj
+# Created by https://www.gitignore.io/api/emacs,clojure,leiningen
+# Edit at https://www.gitignore.io/?templates=emacs,clojure,leiningen
+
+### Clojure ###
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -55,4 +69,6 @@ flycheck_*.el
 /network-security.data
 
 
-# End of https://www.gitignore.io/api/emacs
+### Leiningen ###
+
+# End of https://www.gitignore.io/api/emacs,clojure,leiningen
